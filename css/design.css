@@ -1,0 +1,208 @@
+/* RESET
+================================================== */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+
+/* DEFAULT
+================================================== */
+
+* { outline: none; border: none; margin: 0px; padding: 0px; }
+
+body {
+	height: 100%; width: 100%;
+	overflow: hidden;
+	background-color: #000;
+}
+
+/* TEXT
+================================================== */
+
+* {
+	font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+	h1 {
+
+	}
+	
+	h2 {
+
+	}
+	
+	h3 {
+
+	}
+	
+	h4 {
+
+	}
+	
+	h5 {
+
+	}
+	
+	h6 {
+
+	}
+
+/* Paragraphs */
+
+p {
+	
+}
+
+/* Hyperlinks */
+
+a {
+	font-size: inherit;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+	a:link {
+	
+	}
+	
+	a:visited {
+		
+	}
+	
+	a:active {
+
+	}
+	
+	a:hover {
+		
+	}
+	
+/* Display */
+
+#display {
+	display: block;
+	position: static;
+	top: 0px; left: 0px;
+	width: 100%; height: 30%;
+	background-color: rgb(236,255,228);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+	#display p {
+		display: block;
+		position: static;
+		height: auto; width: auto;
+		white-space: normal;
+		padding: 10px;
+		text-align: right;
+		font-size: 60px;
+	}
+
+/* Keypad */
+
+#keypad {
+	display: block;
+	position: absolute;
+	top: 30%; left: 0px;
+	width: 100%; height: 70%;
+	background-color: rgb(0,0,0);
+}
+
+/* Buttons */
+
+button {
+	display: block;
+	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari */
+	box-sizing: border-box;
+	width: 33.333%; height: 25%;
+	float: left;
+	border: 1px solid rgb(20,20,20);
+	background-color: black;
+}
+	
+	button p {
+		display: block;
+		position: relative;
+		width: 100%; height: 29px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		color: #eee;
+		text-align: center;
+		text-shadow: 0px -1px 1px rgb(100,100,100);
+        filter: dropshadow(color=rgb(100,100,100) offx=0, offy=-1);
+		font-size: 24px;
+		font-weight: 300;
+		z-index: 200;
+	}
+		
+button#comma p {
+	
+}
+
+button#clear p {
+	color: rgb(211,34,50);
+}
+
+#tapBG {
+	display: none;
+	position: fixed;
+	top: 50%; left: 50%;
+	height: 200px; width: 200px;
+	margin-top: -100px; margin-left: -100px;
+	z-index: 900;
+	background-color: rgb(7,202,148);
+	-webkit-border-radius: 500px;
+	border-radius: 500px;
+	background-image: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 180px;
+}
+
+/* MEDIA QUERIES
+================================================== */
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+	
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) {
+
+	/* Display */
+	
+	#display {
+		position: fixed;
+		top: 0px; left: 60%;
+		width: 40%; height: 100%;
+	}
+	
+		#display p {
+			font-size: 48px;
+		}
+
+	/* Keypad */
+	
+	#keypad {
+		position: absolute;
+		top: 0px; left: 0px;
+		width: 60%; height: 100%;
+	}
+	
+	/* Buttons */
+	
+	button {
+		width: 20%; height: 25%;
+	}
+	
+}
